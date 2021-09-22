@@ -28,7 +28,7 @@ library(devtools)
 install_github("rachelzoeb/RIFT")
 ```
 
-### Example code
+### Example code to run original RIFT method
 
 ``` r
 library(RIFT)
@@ -42,3 +42,16 @@ results <- calculateMAD(results)
 results$ind.stats[results$ind.stats$tukey.mild,]
 plotDeltaTukey(results)
 ```
+
+### Example code to run RF and vi-RF methods
+
+``` r
+library(RIFT)
+data(exampleData)
+y <- exampleData$PHENOTYPE - 1
+geno <- as.matrix(exampleData[,-c(1,2)])
+results <- calculateRF(y, geno.mat = geno)
+results$rf[results$rf$MeanDecreaseAccuracy.tukey,]
+results$virf[results$virf$MeanDecreaseAccuracy.tukey,]
+```
+

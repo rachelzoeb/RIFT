@@ -1,8 +1,8 @@
 Package: RIFT
 Title: Rare variant Influential Filtering Tool
-Version: 1.0
+Version: 2.0
 Authors@R: person("Rachel", "Blumhagen", email = "rachel.blumhagen@cuanschutz.edu", role = c("aut", "cre"))
-Description: This package includes software for running the rare variant influential filtering tool (RIFT).  RIFT leverages the influence of the variant on the aggregate test of association by quantifying the change in the aggregate test when that variant is removed.  This version is limited to the aggregate test of SKAT-O.
+Description: This package includes software for running the rare variant influential filtering tool (RIFT).  RIFT leverages the influence of the variant on the aggregate test of association by quantifying the change in the aggregate test when that variant is removed.  Version 2.0 includes function to apply RF and vi-RF (must have randomForest and viRandomForests packages downloaded).
 Depends: R (>= 3.5.1)
 License: GPL-3
 Encoding: UTF-8
@@ -10,4 +10,7 @@ LazyData: true
 Imports: 
   SKAT,
   dplyr
+Suggests:
+  randomforest,
+  viRandomForests
 RoxygenNote: 7.1.1
