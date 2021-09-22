@@ -1,5 +1,5 @@
 
-## RIFT package
+## RIFT package v2.0
 
 We present a novel method for prioritization of rare variants within a
 given set of variants after the set of variants is found to be
@@ -19,6 +19,8 @@ association signal, while adjusting for covariates. This method also
 provides a quantitative measure by which to rank variants for further
 investigation and several visualizations to aid in evaluation of a
 region of interest.
+
+v2.0 (Updated September 22, 2021) - includes functions to apply randomForest (Breiman, 2001) and viRandomForest (Liu & Zhao, 2017) methods to a set of variants.  Must have the packages randomForest and viRandomForest installed.  
 
 ### Installation
 
