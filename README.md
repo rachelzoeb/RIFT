@@ -20,7 +20,12 @@ provides a quantitative measure by which to rank variants for further
 investigation and several visualizations to aid in evaluation of a
 region of interest.
 
-v2.0 (Updated September 22, 2021) - includes functions to apply randomForest (Breiman, 2001) and viRandomForest (Liu & Zhao, 2017) methods to a set of variants.  Must have the packages randomForest and viRandomForest installed.  
+v2.0 (Updated September 22, 2021) - includes functions to apply randomForest (Breiman, 2001) and viRandomForest (Liu & Zhao, 2017) methods to a set of variants.  This requires having the packages randomForest and viRandomForest installed.  
+
+* randomForest can be installed via CRAN (https://cran.r-project.org/web/packages/randomForest/index.html)
+* viRandomForest can be downloaded and installed from https://zhaocenter.org/softwares.html
+
+We have also included a file containing the code used to simulate datasets of rare variant genetic data.  The file simulate_rare_genotype_data.R requires haplotypes simulated by COSI, specification of parameters can be modified based on the desired simulation parameters (size of region, number of cases/controls, proportion variants under the alternative, etc.).  
 
 ### Installation
 
