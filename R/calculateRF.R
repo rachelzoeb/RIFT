@@ -27,11 +27,11 @@ calculateRF <- function(y, geno.mat){
     form <- formula("y ~ .")
 
     ## Run standard random forest function
-    rf_default <- randomForest(form, data = data.frame(y, geno.mat), importance = TRUE, proximity = TRUE)
+    rf_default <- randomForest(form, data = data.frame(y, geno.mat), importance = TRUE, proximity = FALSE)
     rf_default <- data.frame(rf_default$importance)
 
     ## Run default viRandomForest function
-    virf_default <- viRandomForests(form, data = data.frame(y, geno.mat), importance = TRUE, proximity=TRUE)
+    virf_default <- viRandomForests(form, data = data.frame(y, geno.mat), importance = TRUE, proximity = FALSE)
     virf_default <- data.frame(virf_default$importance)
 
     #####**********  Function to call IV using Tukey Mild criteria
